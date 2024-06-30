@@ -533,7 +533,7 @@ build() {
             --includedir="${_php5_icu_first}/include" \
             --disable-tests \
             --disable-debug
-        make -j$(nproc)
+        make -j1
         make install
         ./configure --prefix="/usr/lib/${pkgbase}/icu${_pkgver_icu}" \
             --sysconfdir="/usr/lib/${pkgbase}/icu${_pkgver_icu}/etc" \
@@ -543,7 +543,7 @@ build() {
             --includedir="/usr/lib/${pkgbase}/icu${_pkgver_icu}/include" \
             --disable-tests \
             --disable-debug
-        make -j$(nproc)
+        make -j1
         popd
     fi
 
