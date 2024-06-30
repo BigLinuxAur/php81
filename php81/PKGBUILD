@@ -358,7 +358,6 @@ _phpextensions="\
     --enable-fileinfo=shared \
     --enable-ctype=shared \
     --enable-mbstring=shared \
-    --with-onig=/usr \
     --enable-mbregex \
     --with-pspell=shared,/usr \
     --with-enchant=shared \
