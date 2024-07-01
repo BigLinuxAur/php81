@@ -358,6 +358,7 @@ _phpextensions="\
     --enable-fileinfo=shared \
     --enable-ctype=shared \
     --enable-mbstring=shared \
+    --with-onig=/usr \
     --enable-mbregex \
     --with-pspell=shared,/usr \
     --with-enchant=shared \
@@ -533,7 +534,7 @@ build() {
             --includedir="${_php5_icu_first}/include" \
             --disable-tests \
             --disable-debug
-        make -j1
+        make -j$(nproc)
         make install
         ./configure --prefix="/usr/lib/${pkgbase}/icu${_pkgver_icu}" \
             --sysconfdir="/usr/lib/${pkgbase}/icu${_pkgver_icu}/etc" \
@@ -543,7 +544,7 @@ build() {
             --includedir="/usr/lib/${pkgbase}/icu${_pkgver_icu}/include" \
             --disable-tests \
             --disable-debug
-        make -j1
+        make -j$(nproc)
         popd
     fi
 
