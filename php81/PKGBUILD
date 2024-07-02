@@ -197,10 +197,6 @@ makedepends=(
     "pam"
     "libsodium"
     "libffi"
-    "gcc"
-    "gcc11"
-    "gcc12"
-    "gcc13"
 )
 arch=(
 )
